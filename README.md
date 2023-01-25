@@ -26,4 +26,4 @@ Pull requestler kabul edilir. Büyük değişiklikler için lütfen önce neyi d
 
 [Kodluyoruz Sayfamız](https://www.kodluyoruz.org/)
 
-![Kodluyoruz Logo]((https://raw.githubusercontent.com/Kodluyoruz/taskforce/git/git/markdown-nedir-nasil-kullaniriz-/figures/kodluyoruz_logo.jpg)
+![Kodluyoruz Logo](https://raw.githubusercontent.com/Kodluyoruz/taskforce/git/git/markdown-nedir-nasil-kullaniriz-/figures/kodluyoruz_logo.jpg)
