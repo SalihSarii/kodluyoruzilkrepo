@@ -20,6 +20,8 @@ SELECT title,rental_rate,replacement_cost FROM film
 WHERE title = ANY (SELECT title FROM film WHERE rental_rate = (SELECT MIN(rental_rate) FROM film) AND Replacement_cost = (SELECT MIN(replacement_cost) FROM film)) ;
 
 4-)
-SELECT customer.first_name,customer.last_name,payment.amount FROM payment
+SELECT DISTINCT customer.first_name,customer.last_name FROM payment
 JOIN customer ON payment.customer_id=customer.customer_id
-WHERE payment.payment_id = ANY (SELECT payment.payment_id FROM payment WHERE amount= (SELECT MAX(amount) FROM payment));
+WHERE payment.customer_id =(SELECT payment.customer_id FROM payment GROUP BY payment.customer_id 
+HAVING SUM(amount) = ANY (
+	SELECT MAX(lolo.para) FROM (SELECT SUM(amount) as para FROM payment GROUP BY payment.customer_id) as lolo )) ;
